@@ -1,0 +1,14 @@
+server db = 203.153.105.247,1818
+username : Hhary
+password : Hhary123
+
+DB allow to Access : TI2G, TI3G, LTE
+
+
+
+VPN Access to DB
+server : 222.165.218.41
+username : nsn1
+password :nsn88
+presharedkey = nsn88
+
