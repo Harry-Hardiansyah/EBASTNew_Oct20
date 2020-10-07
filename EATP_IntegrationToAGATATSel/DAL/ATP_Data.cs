@@ -396,7 +396,47 @@ namespace ConsoleApplication1.DAL
                                 info.other_module.Add(othermoduleinfo);
                             }
                         }
-
+                        // EATP_Code add Harry (07/10/2020)  
+                        if (!string.IsNullOrEmpty(Convert.ToString(DataReader["module_combiner"])))
+                        {
+                            info.module_combiner = new List<ModuleCombinerInfo>();
+                            string[] getmodulecombiner = Convert.ToString(DataReader["module_combiner"]).Split(';');
+                            for (int x = 0; x < getmodulecombiner.Count(); x++)
+                            {
+                                ModuleCombinerInfo modulecombinerinfo = new ModuleCombinerInfo();
+                                string[] getmodulecombinerdetail = getmodulecombiner[x].Split('|');
+                                modulecombinerinfo.product_code = Convert.ToString(getmodulecombiner[0]);
+                                modulecombinerinfo.product_name = Convert.ToString(getmodulecombiner[1]);
+                                modulecombinerinfo.product_brand = Convert.ToString(getmodulecombiner[2]);
+                                modulecombinerinfo.product_sn = Convert.ToString(getmodulecombiner[3]);
+                                modulecombinerinfo.picture_near = Convert.ToString(getmodulecombiner[4]);
+                                modulecombinerinfo.picture_far = Convert.ToString(getmodulecombiner[5]);
+                                modulecombinerinfo.ref_id = Convert.ToInt32(getmodulecombiner[6]);
+                                info.module_combiner.Add(modulecombinerinfo);
+                            }
+                        }
+                        if (!string.IsNullOrEmpty(Convert.ToString(DataReader["module_bbu"])))
+                        {
+                            info.module_bbu = new List<ModuleBBUInfo>();
+                            string[] getmodulebbu = Convert.ToString(DataReader["module_bbu"]).Split(';');
+                            for (int x = 0; x < getmodulebbu.Count(); x++)
+                            {
+                                ModuleBBUInfo modulebbuinfo = new ModuleBBUInfo();
+                                string[] getmodulebbudetail = getmodulebbu[x].Split('|');
+                                modulebbuinfo.slot_number = Convert.ToString(getmodulebbu[0]);
+                                modulebbuinfo.module_code = Convert.ToString(getmodulebbu[1]);
+                                modulebbuinfo.module_name = Convert.ToString(getmodulebbu[2]);
+                                modulebbuinfo.module_brand = Convert.ToString(getmodulebbu[3]);
+                                modulebbuinfo.module_sn = Convert.ToString(getmodulebbu[4]);
+                                modulebbuinfo.picture_near = Convert.ToString(getmodulebbu[5]);
+                                modulebbuinfo.picture_far = Convert.ToString(getmodulebbu[6]);
+                                modulebbuinfo.ref_id = Convert.ToInt32(getmodulebbu[7]);
+                                modulebbuinfo.available_slot = Convert.ToString(getmodulebbu[8]);
+                                modulebbuinfo.cons_power_bb = Convert.ToString(getmodulebbu[9]);
+                                info.module_bbu.Add(modulebbuinfo);
+                            }
+                        }
+                        // EATP_Code end Harry (07/10/2020)
                     }
                 }
                 else

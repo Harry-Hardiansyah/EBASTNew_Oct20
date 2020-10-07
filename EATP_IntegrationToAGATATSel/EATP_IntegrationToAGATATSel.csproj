@@ -63,8 +63,10 @@
     <Compile Include="Entities\BSCRNCInfo.cs" />
     <Compile Include="Entities\BTSInfo.cs" />
     <Compile Include="Entities\FeederInfo.cs" />
+    <Compile Include="Entities\ModuleBBUInfo.cs" />
     <Compile Include="Entities\moduleBSCRNCInfo.cs" />
     <Compile Include="Entities\moduleBTSInfo.cs" />
+    <Compile Include="Entities\ModuleCombinerInfo.cs" />
     <Compile Include="Entities\ModuleMWInfo.cs" />
     <Compile Include="Entities\OtherModuleInfo.cs" />
     <Compile Include="Entities\RadioMWInfo.cs" />

@@ -116,5 +116,20 @@ namespace ConsoleApplication1.Entities
             get { return _other_module; }
             set { _other_module = value; }
         }
+        // EATP_Code add Harry (07/10/2020)
+        private List<ModuleCombinerInfo> _module_combiner;
+        public List<ModuleCombinerInfo> module_combiner
+        {
+            get { return _module_combiner; }
+            set { _module_combiner = value; }
+        }
+
+        private List<ModuleBBUInfo> _module_bbu;
+        public List<ModuleBBUInfo> module_bbu
+        {
+            get { return _module_bbu; }
+            set { _module_bbu = value; }
+        }
+        // EATP_Code end Harry (07/10/2020)
     }
 }
