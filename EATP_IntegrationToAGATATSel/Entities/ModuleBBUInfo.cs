@@ -17,6 +17,6 @@ namespace ConsoleApplication1.Entities
         public string picture_far { get; set; }
         public int ref_id { get; set; }
         public string available_slot { get; set; }
-        public string cons_power_bb { get; set; }
+        public string consumption_power { get; set; }
     }
 }

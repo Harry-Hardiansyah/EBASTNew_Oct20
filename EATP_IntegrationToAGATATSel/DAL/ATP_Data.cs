@@ -128,6 +128,12 @@ namespace ConsoleApplication1.DAL
                         info.bts.dcpdb_type = Convert.ToString(DataReader["dcpdb_type"]);
                         info.bts.antenna_gps = Convert.ToString(DataReader["antenna_gps"]);
                         info.bts.bscrnc_name = Convert.ToString(DataReader["bscrnc_name"]);
+                        // EATP_Code add Harry (07/10/2020)
+                        info.bts.dcpdbpicture_near = Convert.ToString(DataReader["dcodbpicture_near"]);
+                        info.bts.dcpdbpicture_far = Convert.ToString(DataReader["dcodbpicture_far"]);
+                        info.bts.consumption_power = Convert.ToString(DataReader["consumption_power"]);
+                        // EATP_Code End Harry (07/10/2020)
+
 
                         pathImage = (Path.Combine(ConfigurationManager.AppSettings["pathPhoto"], Convert.ToString(DataReader["workpackageid"]), Convert.ToString(GetBTSInfo_geoTag[2]))).Replace("/", "\\");
                         if (!string.IsNullOrEmpty(Convert.ToString(GetBTSInfo_geoTag[2])) && File.Exists(pathImage))
@@ -432,7 +438,7 @@ namespace ConsoleApplication1.DAL
                                 modulebbuinfo.picture_far = Convert.ToString(getmodulebbu[6]);
                                 modulebbuinfo.ref_id = Convert.ToInt32(getmodulebbu[7]);
                                 modulebbuinfo.available_slot = Convert.ToString(getmodulebbu[8]);
-                                modulebbuinfo.cons_power_bb = Convert.ToString(getmodulebbu[9]);
+                                modulebbuinfo.consumption_power = Convert.ToString(getmodulebbu[9]);
                                 info.module_bbu.Add(modulebbuinfo);
                             }
                         }

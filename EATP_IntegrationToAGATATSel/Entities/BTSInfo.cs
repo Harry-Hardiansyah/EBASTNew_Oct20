@@ -45,5 +45,12 @@ namespace ConsoleApplication1.Entities
         public int dcpdb_quantity { get; set; }
         public string dcpdb_type { get; set; }
         public string antenna_gps { get; set; }
+
+        // EATP_Code add Harry (07/10/2020)
+        public string dcpdbpicture_near { get; set; }
+        public string dcpdbpicture_far { get; set; }
+        public string consumption_power { get; set; }
+        // EATP_Code end Harry (07/10/2020)
+
     }
 }
